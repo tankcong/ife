@@ -1,0 +1,23 @@
+.item-name::after {
+  content: "\00a0\00a0";
+}
+
+.item-name::before {
+  content: "\00a0\00a0";
+}
+
+.item-name:nth-child(1)::before {
+  content: "";
+}
+
+.item-name {
+  font-weight: 900;
+}
+
+p {
+  margin-top: 0;
+}
+
+h4 {
+  margin-bottom: 0;
+}
