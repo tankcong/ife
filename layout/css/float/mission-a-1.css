@@ -1,0 +1,19 @@
+.container {
+  width: 800px;
+  height: 800px;
+  background: #24292e;
+}
+
+.left {
+  width: 30%;
+  height: 100%;
+  float: left;
+  background: seagreen;
+}
+
+.right {
+  width: 70%;
+  height: 100%;
+  margin-left: 30%;
+  background: coral;
+}

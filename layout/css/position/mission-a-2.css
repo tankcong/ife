@@ -1,0 +1,22 @@
+.container {
+  width: 100%;
+  height: 200px;
+  background: #24292e;
+  position: absolute;
+}
+
+.left {
+  width: 150px;
+  height: 100%;
+  background: seagreen;
+  position: absolute;
+}
+
+.right {
+  width: calc(100% - 150px);
+  height: 100%;
+  left: 150px;
+  position: absolute;
+  background: coral;
+  display: block;
+}

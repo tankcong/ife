@@ -1,0 +1,21 @@
+.container {
+  width: 600px;
+  height: 200px;
+  background: #24292e;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.left {
+  height: 100%;
+  flex: 3;
+  background: seagreen;
+}
+
+.right {
+  height: 100%;
+  flex: 7;
+  background: coral;
+  display: block;
+}

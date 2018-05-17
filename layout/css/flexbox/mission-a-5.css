@@ -1,0 +1,27 @@
+.container {
+  width: 100%;
+  height: 200px;
+  background: #24292e;
+  display: flex;
+  flex-direction: row;
+}
+
+.left {
+  width: 100px;
+  height: 100%;
+  background: seagreen;
+}
+
+.middle {
+  width: 100px;
+  height: 100%;
+  left: 100px;
+  background: skyblue;
+}
+
+.right {
+  height: 100%;
+  flex: 1;
+  background: coral;
+  display: block;
+}

@@ -1,0 +1,27 @@
+.container {
+  overflow: hidden;
+  width: 100%;
+  height: 200px;
+  background: #24292e;
+}
+
+.left {
+  float: left;
+  width: 100px;
+  height: 100%;
+  background: seagreen;
+}
+
+.middle {
+  float: left;
+  width: 100px;
+  height: 100%;
+  background: skyblue;
+}
+
+.right {
+  float: right;
+  width: calc(100% - 200px);
+  height: 100%;
+  background: coral;
+}

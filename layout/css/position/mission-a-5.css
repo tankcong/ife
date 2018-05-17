@@ -1,0 +1,30 @@
+.container {
+  position: absolute;
+  width: 100%;
+  height: 200px;
+  background: #24292e;
+}
+
+.left {
+  position: absolute;
+  width: 100px;
+  height: 100%;
+  background: rgb(133, 192, 158);
+}
+
+.middle {
+  position: absolute;
+  left: 100px;
+  width: 100px;
+  height: 100%;
+  background: skyblue;
+}
+
+.right {
+  position: absolute;
+  right: 0;
+  display: block;
+  width: calc(100% - 200px);
+  height: 100%;
+  background: coral;
+}
