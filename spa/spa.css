@@ -37,8 +37,8 @@ body {
 }
 
 .nav-input {
-    display: none;
     position: absolute;
+    display: none;
     width: 0px;
     height: 0px;
 }
@@ -295,6 +295,8 @@ body {
 }
 
 #nav-chat {
+    display: inline-block;
+    float: left;
     overflow: auto;
     box-sizing: border-box;
     width: 400px;
@@ -329,15 +331,6 @@ body {
     border-radius: 4px;
     text-align: left;
 }
-
-/* 
-#search-bar span {
-    float: left;
-    margin-left: 14px;
-    color: #9FA9BA;
-    font-size: 14px;
-    line-height: 36px;
-} */
 
 #search-bar input {
     display: inline-block;
@@ -471,7 +464,7 @@ body {
     overflow: hidden;
     margin: 0 60px 0 30px;
     max-height: 40px;
-    color: #585D68;
+    color: #585d68;
     font-size: 13px;
     font-family: "ProximaNova";
     line-height: 1.5;
@@ -495,4 +488,291 @@ body {
 
 .chat-item-notification-active {
     display: inline;
+}
+
+#conversation-container {
+    float: left;
+    overflow: auto;
+    width: calc(100% - 400px);
+    height: calc(100% - 82px);
+}
+
+#conversation-header {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    box-sizing: border-box;
+    padding-right: 20px;
+    width: calc(100%);
+    height: 70px;
+    border-width: 0 0 1px 0;
+    border-style: solid;
+    border-color: #e8e8e8;
+}
+
+#conversation-name {
+    display: inline-block;
+    flex: 1;
+    margin-left: 28px;
+    color: #585d68;
+    font-size: 18px;
+}
+
+#conversation-status {
+    display: inline-block;
+    margin-left: 10px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #1bb934;
+}
+
+#conversation-btns {
+    box-sizing: border-box;
+}
+
+.conversation-btn {
+    float: left;
+    box-sizing: border-box;
+    width: 36px;
+    height: 34px;
+    background-image: linear-gradient( 180deg, #fff 0%, #f1f3f7 100%);
+    text-align: center;
+    line-height: 34px;
+    cursor: pointer;
+}
+
+#conversation-btn-user {
+    border-width: 1px 0 1px 1px;
+    border-style: solid;
+    border-color: #ced0da;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+
+#conversation-btn-upload {
+    border-width: 1px 1px 1px 1px;
+    border-style: solid;
+    border-color: #ced0da;
+}
+
+#conversation-btn-trash {
+    border-width: 1px 1px 1px 0;
+    border-style: solid;
+    border-color: #ced0da;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+.conversation-btn img {
+    vertical-align: middle;
+}
+
+#conversation-page {
+    margin-left: 20px;
+    padding-left: 10px;
+    width: 80px;
+    border-width: 0 0 0 1px;
+    border-style: solid;
+    border-color: #ced0da;
+    color: #585d68;
+    text-align: center;
+}
+
+#conversation-btn-page-left {
+    border-width: 1px 0 1px 1px;
+    border-style: solid;
+    border-color: #ced0da;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+
+#conversation-btn-page-right {
+    border-width: 1px 1px 1px 1px;
+    border-style: solid;
+    border-color: #ced0da;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+.conversation-body {
+    position: relative;
+}
+
+.conversation-item {
+    position: relative;
+    box-sizing: border-box;
+    margin-right: 20px;
+    margin-left: 20px;
+    padding-top: 20px;
+    padding-bottom: 8px;
+    padding-left: 66px;
+    width: calc(100% - 40px);
+}
+
+.conversation-item-avatar {
+    position: absolute;
+    top: 20px;
+    left: 0;
+    display: block;
+    width: 46px;
+    height: 46px;
+}
+
+.conversation-item p {
+    margin: 0;
+    color: #585d68;
+}
+
+.conversation-item-name {
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.conversation-item-name time {
+    color: #7f8fa4;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.conversation-item-content {
+    margin-top: 10px !important;
+    font-size: 14px;
+}
+
+.conversation-divider {
+    position: relative;
+    width: 100%;
+    height: 20px;
+    color: #585d68;
+}
+
+.conversation-divider-highlight {
+    color: #2399f1;
+}
+
+.conversation-divider hr {
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    margin: auto 0;
+    width: 100%;
+    height: 1px;
+    border: 0px;
+    background: #ced0da;
+    box-shadow: 0;
+}
+
+.conversation-divider-highlight hr {
+    background: #2399f1;
+}
+
+.conversation-divider span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: auto;
+    padding: 0 14px;
+    height: 20px;
+    background-color: #fff;
+    font-size: 14px;
+    line-height: 20px;
+    transform: translate(-50%, -50%);
+}
+
+.conversation-item-pic-container {
+    position: relative;
+    display: flex;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.conversation-item-pic-item {
+    position: relative;
+    width: 156px;
+    height: 100px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.conversation-item-pic-cover {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: none;
+    margin: auto;
+    width: 52px;
+    height: 52px;
+}
+
+.conversation-item-pic-item:hover .conversation-item-pic-cover {
+    display: block;
+}
+
+.conversation-item-pic-item:hover.conversation-item-pic-item::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 3px;
+    background-color: rgba(0, 0, 0, 0.3);
+    content: '';
+}
+
+.conversation-item-pic-item:nth-of-type(2) {
+    margin-left: 10px;
+}
+
+.conversation-input-container {
+    box-sizing: border-box;
+    margin: 15px 20px;
+    margin-bottom: 15px;
+    width: calc(100% - 40px);
+    height: 58px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #ced0da;
+    border-radius: 4px;
+    color: #585d68;
+}
+
+#conversation-input-btn {
+    position: relative;
+    float: left;
+    box-sizing: border-box;
+    margin-top: 1px;
+    width: 56px;
+    height: 55px;
+    border-width: 0 1px 0 0;
+    border-style: solid;
+    border-color: #ced0da;
+    border-radius: 4px 0 0 4px;
+    background-image: linear-gradient( 180deg, #fff 0%, #f1f3f7 100%);
+}
+
+#conversation-input-btn img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+}
+
+#conversation-input {
+    float: left;
+    box-sizing: border-box;
+    margin-top: 1px;
+    padding-left: 10px;
+    width: calc(100% - 58px);
+    height: 55px;
+    outline: none;
+    border: none;
+    border-width: 0;
+    color: #585d68;
+    font-size: 14px;
+    line-height: 1.4;
 }
