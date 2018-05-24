@@ -37,6 +37,7 @@ body {
 }
 
 .nav-input {
+    display: none;
     position: absolute;
     width: 0px;
     height: 0px;
@@ -129,7 +130,7 @@ body {
     text-align: center;
 }
 
-.nav-item-num {
+.nav-item-notification {
     display: none;
     box-sizing: border-box;
     padding: 0px 8px;
@@ -140,11 +141,11 @@ body {
     line-height: 24px;
 }
 
-.nav-item-num-active {
+.nav-item-notification-active {
     display: inline;
 }
 
-.nav-item-num-warning {
+.nav-item-notification-warning {
     display: inline-block !important;
     padding: 0;
     width: 24px;
@@ -178,11 +179,11 @@ body {
 }
 
 #nav-goals {
+    position: absolute;
+    bottom: 20px;
     color: #fff;
     font-size: 14px;
     line-height: 1.2;
-    position: absolute;
-    bottom: 20px;
 }
 
 #nav-progress-bar {
@@ -199,4 +200,299 @@ body {
     height: 4px;
     border-radius: 2px;
     background: linear-gradient( 0deg, rgb(127, 91, 230) 1%, rgb(157, 143, 227) 100%);
+}
+
+#container-messages {
+    box-sizing: border-box;
+    margin-left: 350px;
+    width: calc(100% - 350px);
+    height: 100%;
+}
+
+#topbar {
+    overflow: auto;
+    box-sizing: border-box;
+    height: 82px;
+    border-width: 0 0 1px 0;
+    border-style: solid;
+    border-color: #e8e8e8;
+}
+
+#topbar-title {
+    margin-left: 28px;
+    color: #354052;
+    font-size: 24px;
+    font-family: "ProximaNova";
+    line-height: 30px;
+}
+
+#topbar-self {
+    position: absolute;
+    top: 0;
+    right: 30px;
+    box-sizing: border-box;
+    padding-top: 12px;
+    height: inherit;
+}
+
+#topbar-self-face-container {
+    float: left;
+    box-sizing: border-box;
+}
+
+#topbar-self-face {
+    box-sizing: border-box;
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+#topbar-self-status {
+    position: absolute;
+    top: 42px;
+    left: 30px;
+    box-sizing: border-box;
+    width: 20px;
+    height: 20px;
+    border: 4px solid #fff;
+    border-radius: 10px;
+    background: #fff;
+    cursor: pointer;
+}
+
+#topbar-self-text {
+    display: inline-block;
+    margin-right: 30px;
+    margin-left: 12px;
+    height: 100%;
+}
+
+#topbar-self-name {
+    display: block;
+    margin: 0;
+    color: #2399F1;
+    font-size: 16px;
+}
+
+#topbar-self-role {
+    display: inline-block;
+    margin-top: 8px;
+    color: #b5b5b5;
+    font-size: 14px;
+}
+
+#topbar-self-dropdown {
+    float: right;
+    margin-top: -12px;
+    height: 100%;
+    line-height: 70px;
+}
+
+#topbar-self-dropdown img {
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+#nav-chat {
+    overflow: auto;
+    box-sizing: border-box;
+    width: 400px;
+    height: calc(100% - 82px);
+    border-width: 0 1px 0 0;
+    border-style: solid;
+    border-color: #e8e8e8;
+}
+
+#search-container {
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+    height: 70px;
+    border-width: 0 0 1px 0;
+    border-style: solid;
+    border-color: #e8e8e8;
+    text-align: center;
+}
+
+#search-bar {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    box-sizing: border-box;
+    margin: auto;
+    width: 340px;
+    height: 36px;
+    border: 1px solid #e8e8e8;
+    border-radius: 4px;
+    text-align: left;
+}
+
+/* 
+#search-bar span {
+    float: left;
+    margin-left: 14px;
+    color: #9FA9BA;
+    font-size: 14px;
+    line-height: 36px;
+} */
+
+#search-bar input {
+    display: inline-block;
+    margin-left: 14px;
+    width: calc(100% - 50px);
+    height: 34px;
+    outline: 0;
+    outline-offset: 0;
+    border: 0;
+    box-shadow: none;
+    color: #9FA9BA;
+    font-size: 14px;
+    line-height: 34px;
+}
+
+#search-bar img {
+    vertical-align: middle;
+    text-align: center;
+    line-height: 36px;
+}
+
+#chat-items {
+    width: 100%;
+    height: calc(100% - 152px);
+}
+
+.chat-item-container {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 130px;
+    border-width: 0 0 1px 0;
+    border-style: solid;
+    border-color: #e8e8e8;
+}
+
+.chat-item-radio {
+    position: absolute;
+    display: none;
+}
+
+.chat-item-head-container {
+    overflow: hidden;
+    box-sizing: border-box;
+    margin-left: 30px;
+    padding-top: 15px;
+    width: calc(100% - 30px);
+    height: 71px;
+}
+
+.chat-item-avatar {
+    float: left;
+    box-sizing: border-box;
+    width: 46px;
+    height: 46px;
+}
+
+.chat-item-name-container {
+    float: left;
+    box-sizing: border-box;
+    margin-left: 20px;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.chat-item-name-highlight {
+    display: none;
+    float: left;
+    margin-top: 10px;
+    width: 8px;
+    height: 8px;
+    border-radius: 4px;
+    background-color: #2399f1;
+    vertical-align: center;
+    text-align: center;
+    font-size: 16px;
+    line-height: 1.2;
+}
+
+.chat-item-name {
+    display: block;
+    float: left;
+    margin-top: 4px;
+    margin-left: 0px;
+    font-size: 16px;
+    font-family: "ProximaNova";
+    line-height: 1.2;
+}
+
+.chat-item-body {
+    display: block;
+    margin-top: 28px;
+    color: #B5B5B5;
+    font-size: 14px;
+    line-height: 1.2;
+}
+
+.chat-item-head-time {
+    position: absolute;
+    top: 24px;
+    right: 20px;
+    color: #7F8FA4;
+    font-size: 14px;
+}
+
+.chat-item-active {
+    position: absolute;
+    top: 0;
+    left: 0;
+    visibility: hidden;
+    width: 3px;
+    height: 130px;
+    background: #2399f1;
+}
+
+.chat-item-radio:checked~.chat-item-head-container .chat-item-name-highlight {
+    display: inline;
+}
+
+.chat-item-radio:checked~.chat-item-head-container .chat-item-name {
+    display: inline-block;
+    margin-left: 8px;
+}
+
+.chat-item-radio:checked~.chat-item-active {
+    visibility: visible;
+}
+
+.chat-item-content {
+    position: relative;
+    overflow: hidden;
+    margin: 0 60px 0 30px;
+    max-height: 40px;
+    color: #585D68;
+    font-size: 13px;
+    font-family: "ProximaNova";
+    line-height: 1.5;
+}
+
+.chat-item-notification {
+    position: absolute;
+    top: 80px;
+    right: 20px;
+    display: none;
+    box-sizing: border-box;
+    width: 24px;
+    height: 24px;
+    border-radius: 12px;
+    background: #1991eb;
+    color: #fff;
+    text-align: center;
+    font-size: 14px;
+    line-height: 24px;
+}
+
+.chat-item-notification-active {
+    display: inline;
 }
