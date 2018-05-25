@@ -1,66 +1,118 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 
-  <head>
-    <meta charset="UTF-8">
-    <title>IFE</title>
-    <link rel="stylesheet" type="text/css" href="css/style_3.css" />
-  </head>
+<head>
+  <meta charset="UTF-8">
+  <title>IFE</title>
+  <link rel="stylesheet" type="text/css" href="css/style_3.css" />
+</head>
 
-  <body>
-    <div id="container">
-      <div class="left">
-        <h2 class="title">简历</h2>
-      </div>
-      <div class="content">
-        <section class="item-area">
-          <h3 class="item-title">基本信息</h3>
-          <p class="item-content">
-            <span class="item-name">姓名</span>张三
-            <span class="item-name">性别</span>男
-            <span class="item-name">应聘职位</span>前端工程师
-          </p>
-        </section>
-        <section class="item-area">
-          <h3 class="item-title">联系方式</h3>
-          <p class="item-content">
-            <span class="item-name">手机</span>12341234123
-            <span class="item-name">Email</span>
-            <a href="mailto:joinefe@baidu.com">joinefe@baidu.com</a>
-            <span class="item-name">个人主页</span>
-            <a href="https://github.com/baidu">Github</a>
-          </p>
-        </section>
-        <section class="item-area">
-          <h3 class="item-title">能力描述</h3>
-          <div class="item-content">
-            <h4>技术能力</h4>
-            <p>熟练掌握HTML, CSS, JavaScript</p>
-            <h4>综合能力</h4>
-            <p>良好的沟通，主动积极，努力勤奋</p>
-          </div>
-        </section>
-        <section class="item-area">
-          <h3 class="item-title">教育经历</h3>
-          <div class="item-content">
-            <h4>本科</h4>
-            <p>百度前端技术学院小薇学院</p>
-            <h4>研究生</h4>
-            <p>百度前端技术学院大斌学院</p>
-          </div>
-        </section>
-        <section class="item-area">
-          <h3 class="item-title">项目经历</h3>
-          <div class="item-content">
-            <h4>小度小度</h4>
-            <p>作为前端工程师角色参与了ABC组件的开发</p>
-            <h4>SAN Doc</h4>
-            <p>作为文档工程师参与了SAN Doc编写</p>
-          </div>
-        </section>
-      </div>
+<body>
+  <div id="container">
+    <div class="left">
+      <h2 class="title">简历</h2>
+      <p id="greeting"></p>
     </div>
-  </body>
+    <div class="content">
+      <section class="item-area">
+        <h3 class="item-title">基本信息</h3>
+        <div class="item-content">
+          <span class="item-name">姓名</span>张三
+          <span class="item-name">性别</span>男
+          <span class="item-name">应聘职位</span>前端工程师
+          <button type="button" id="btn-motto" onclick="showMotto()">motto motto</button>
+        </div>
+      </section>
+      <section class="item-area">
+        <h3 class="item-title">联系方式</h3>
+        <p class="item-content">
+          <span class="item-name">手机</span>12341234123
+          <span class="item-name">Email</span>
+          <a href="mailto:joinefe@baidu.com">joinefe@baidu.com</a>
+          <span class="item-name">个人主页</span>
+          <a href="https://github.com/baidu">Github</a>
+        </p>
+      </section>
+      <section class="item-area">
+        <h3 class="item-title">能力描述</h3>
+        <div class="item-content">
+          <h4>技术能力</h4>
+          <p>熟练掌握HTML, CSS, JavaScript</p>
+          <h4>综合能力</h4>
+          <p>良好的沟通，主动积极，努力勤奋</p>
+        </div>
+      </section>
+      <section class="item-area">
+        <h3 class="item-title">教育经历</h3>
+        <div class="item-content">
+          <h4>本科</h4>
+          <p>百度前端技术学院小薇学院</p>
+          <h4>研究生</h4>
+          <p>百度前端技术学院大斌学院</p>
+        </div>
+      </section>
+      <section class="item-area">
+        <h3 class="item-title">项目经历</h3>
+        <div class="item-content">
+          <h4>小度小度</h4>
+          <p>作为前端工程师角色参与了ABC组件的开发</p>
+          <h4>SAN Doc</h4>
+          <p>作为文档工程师参与了SAN Doc编写</p>
+        </div>
+      </section>
+    </div>
+  </div>
+  <script>
+    function showMotto() {
+      console.log(
+        "Nothing good comes easy. If it’s hard, it’s worth doing. \nRTFSC (Read the F ** ing Source Code : - ) -- Linus Torvalds "
+      )
+    };
+
+    function formatDate(date) {
+      var d = new Date(date);
+      var month = '' + (d.getMonth() + 1);
+      var day = '' + d.getDate();
+      var year = d.getFullYear();
+      var hour = d.getHours();
+      var minute = d.getMinutes();
+      var second = d.getSeconds();
+
+      function append0(unit) {
+        if (unit.length < 2) {
+          return '0' + unit;
+        }
+        return unit;
+      }
+      month = append0(month);
+      day = append0(day);
+      hour = append0(hour);
+      minute = append0(minute);
+      second = append0(second);
+      return [year, second, day].join('-') + " " + [hour, minute, second].join(":");
+    }
+
+    function showGreetings() {
+      var hour = new Date().getHours();
+      var period = "";
+      if (hour >= 0 && hour < 6) {
+        period = "凌晨";
+      } else if (hour >= 6 && hour <= 11) {
+        period = "早上";
+      } else if (hour >= 11 && hour < 14) {
+        period = "中午";
+      } else if (hour >= 14 && hour < 18) {
+        period = "下午";
+      } else if (hour >= 18 && hour < 24) {
+        period = "晚上";
+      };
+      var date = formatDate(new Date());
+      document.getElementById("greeting").innerHTML = period + "好，" + date;
+    };
+    window.onload = setInterval(showGreetings, 1000);
+  </script>
+
+</body>
 
 </html>
 

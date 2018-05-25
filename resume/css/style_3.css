@@ -3,14 +3,22 @@
 }
 
 .left {
+  position: relative;
   width: 100%;
   height: 100px;
   background-color: #848484;
 }
 
 .title {
-  line-height: 100px;
   padding-left: 20px;
+  color: #fff;
+  line-height: 100px;
+}
+
+#greeting {
+  position: absolute;
+  top: 10px;
+  right: 30px;
   color: #fff;
 }
 
@@ -19,27 +27,27 @@
 }
 
 .item-area {
-  height: 160px;
   overflow: hidden;
+  height: 160px;
+  border-width: 0 2px 2px 0;
   border-style: solid;
   border-color: #f2f2f2;
-  border-width: 0 2px 2px 0;
 }
 
 .item-title {
+  float: left;
+  margin: 0 0 0 0;
   width: 100px;
   height: 160px;
-  line-height: 160px;
-  text-align: center;
-  margin: 0 0 0 0;
   background: #d6d6d6;
-  float: left;
+  text-align: center;
+  line-height: 160px;
 }
 
 .item-content {
-  height: 160px;
-  padding: 15px 0 0 10px;
   margin: 0 0 0 100px;
+  padding: 15px 0 0 10px;
+  height: 160px;
 }
 
 .item-name::after {
@@ -85,4 +93,15 @@ h4 {
 
 hr {
   margin: 0 0 0 0;
+}
+
+#btn-motto {
+  display: block;
+  margin-top: 60px;
+  height: 36px;
+  outline: none;
+  border-color: skyblue;
+  color: skyblue;
+  font-size: 16px;
+  line-height: 36px;
 }
