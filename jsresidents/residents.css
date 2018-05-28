@@ -1,0 +1,18 @@
+label,
+input,
+button {
+    font-size: 16px;
+}
+
+button {
+    box-sizing: border-box;
+    padding: 4px;
+    margin-top: 4px;
+}
+
+hr {
+    border-color: #1a98ec;
+    box-shadow: none;
+    border-style: solid;
+    background: #1a98ec;
+}
