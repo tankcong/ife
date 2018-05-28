@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>IFE ECMAScript</title>
+    <style>
+        select {
+            display: none;
+        }
+    </style>
+</head>
+<!--480 * 8160-->
+
+<body>
+    <div id="sprite" style="background-image: url('./erik_ce204002.jpg'); width: 480px; height: 480px;">
+    </div>
+    <script>
+        var positionY = 0;
+        var reverse = false;
+        setInterval(function () {
+            var sprite = document.querySelector("#sprite");
+            sprite.style.backgroundPositionY = positionY + "px";
+            if (reverse) {
+                positionY += 480;
+            } else {
+                positionY -= 480;
+            }
+            console.log(positionY);
+            if (positionY === -7680) {
+                reverse = true;
+            } else if (positionY === 0) {
+                reverse = false;
+            }
+        }, 100);
+    </script>
+</body>
+
+</html>
